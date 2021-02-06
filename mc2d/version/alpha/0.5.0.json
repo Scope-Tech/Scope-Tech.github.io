@@ -1,0 +1,10 @@
+{
+    "libs": [
+        "fastutil-8.4.4",
+        "log4j-api-2.14.0",
+        "log4j-core-2.14.0",
+        "lwjgl-3.2.3",
+        "lwjgl-glfw-3.2.3",
+        "lwjgl-opengl-3.2.3"
+    ]
+}
