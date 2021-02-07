@@ -26,7 +26,8 @@
                 <td colspan=2>您可以在线选择Minecraft2D的版本并下载。<br>
                     如果要尝鲜最新版本，请选择latest版本，<br>
                     否则请选择stable版本。<br>
-                    不推荐您使用pre-alpha版本。
+                    不推荐您使用pre-alpha版本。<br>
+                    请注意，从0.5.0开始，您必须手动下载依赖库或使用我们的启动器。
                 </td>
             </tr>
             <tr>
@@ -57,6 +58,14 @@
                             </select>
                         </td></tr>
                     </table>
+                    <table style="width: 100%;" class=pretty>
+                        <tr><th>启动器版本</th></tr>
+                        <tr><td>
+                            <select id=launcherVer style="width: 100%;">
+                                <option value=0.1.0.jar>0.1.0</option>
+                            </select>
+                        </td></tr>
+                    </table>
                 </td>
                 <td>
                     <table style="width: 100%;" class=pretty>
@@ -69,6 +78,19 @@
                         <script>
                             function download() {
                                 window.open('version/' + getElementById('ver').selectedOptions[0].value);
+                            }
+                        </script>
+                    </table>
+                    <table style="width: 100%;" class=pretty>
+                        <tr><th>启动器下载</th></tr>
+                        <tr>
+                            <td>
+                                <input onclick="downloadLauncher()" type="button" value="点击下载" style="border: 1px solid; border-radius: 5px; width: 100%;">
+                            </td>
+                        </tr>
+                        <script>
+                            function downloadLauncher() {
+                                window.open(`launcher/mc2d-launcher-${getElementById('launcherVer').selectedOptions[0].value}`);
                             }
                         </script>
                     </table>
